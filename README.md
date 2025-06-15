@@ -1,5 +1,3 @@
----
-
 # 📌 Analisis Clustering Aplikasi Pinjaman (Jupyter Notebook)
 
 Proyek machine learning komprehensif yang melakukan segmentasi pelanggan pada data aplikasi pinjaman menggunakan algoritma Self-Organizing Map (SOM), sepenuhnya dikerjakan dalam notebook Jupyter.
