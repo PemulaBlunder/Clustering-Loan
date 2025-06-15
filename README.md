@@ -4,17 +4,19 @@ Proyek machine learning komprehensif yang melakukan segmentasi pelanggan pada da
 
 ## 📋 Daftar Isi
 
-- [Gambaran Umum](##gambaran-umum)
-- [Fitur](##fitur)
-- [Dataset](##dataset)
-- [Instalasi](##instalasi)
-- [Penggunaan](##penggunaan)
-- [Metodologi](##metodologi)
-- [Hasil](##hasil)
-- [Struktur Proyek](##struktur-proyek)
-- [Dependencies](##dependencies)
-- [Kontribusi](##kontribusi)
-- [Lisensi](##lisensi)
+- [🎯 Gambaran Umum](#-gambaran-umum)
+- [✨ Fitur](#-fitur)
+- [📊 Dataset](#-dataset)
+- [🛠️ Instalasi](#️-instalasi)
+- [🚀 Penggunaan](#-penggunaan)
+- [🔬 Metodologi](#-metodologi)
+- [📈 Hasil](#-hasil)
+- [📁 Struktur Proyek](#-struktur-proyek)
+- [🔧 Kustomisasi](#-kustomisasi)
+- [🤝 Kontribusi](#-kontribusi)
+- [📝 Lisensi](#-lisensi)
+- [📞 Kontak](#-kontak)
+- [🙏 Acknowledgments](#-acknowledgments)
 
 ## 🎯 Gambaran Umum
 
