@@ -1,230 +1,230 @@
-# Analisis Clustering Aplikasi Pinjaman
+---
 
-Proyek machine learning komprehensif yang melakukan segmentasi pelanggan pada data aplikasi pinjaman menggunakan algoritma clustering Self-Organizing Map (SOM).
+# 📌 Analisis Clustering Aplikasi Pinjaman (Jupyter Notebook)
+
+Proyek machine learning komprehensif yang melakukan segmentasi pelanggan pada data aplikasi pinjaman menggunakan algoritma Self-Organizing Map (SOM), sepenuhnya dikerjakan dalam notebook Jupyter.
 
 ## 📋 Daftar Isi
 
-- [🎯 Gambaran Umum](#-gambaran-umum)
-- [✨ Fitur](#-fitur)
-- [📊 Dataset](#-dataset)
-- [🛠️ Instalasi](#️-instalasi)
-- [🚀 Penggunaan](#-penggunaan)
-- [🔬 Metodologi](#-metodologi)
-- [📈 Hasil](#-hasil)
-- [📁 Struktur Proyek](#-struktur-proyek)
-- [🔧 Kustomisasi](#-kustomisasi)
-- [🤝 Kontribusi](#-kontribusi)
-- [📝 Lisensi](#-lisensi)
-- [📞 Kontak](#-kontak)
-- [🙏 Acknowledgments](#-acknowledgments)
+* [🎯 Gambaran Umum](#-gambaran-umum)
+* [✨ Fitur](#-fitur)
+* [📊 Dataset](#-dataset)
+* [🛠️ Instalasi](#️-instalasi)
+* [🚀 Penggunaan](#-penggunaan)
+* [🔬 Metodologi](#-metodologi)
+* [📈 Hasil](#-hasil)
+* [📁 Struktur Proyek](#-struktur-proyek)
+* [🔧 Kustomisasi](#-kustomisasi)
+* [🤝 Kontribusi](#-kontribusi)
+* [📝 Lisensi](#-lisensi)
+* [📞 Kontak](#-kontak)
+* [🙏 Acknowledgments](#-acknowledgments)
+
+---
 
 ## 🎯 Gambaran Umum
 
-Proyek ini menganalisis data aplikasi pinjaman untuk mengidentifikasi segmen pelanggan yang berbeda menggunakan teknik machine learning tanpa supervisi. Analisis ini membantu institusi keuangan memahami basis pelanggan mereka dan membuat keputusan berbasis data untuk persetujuan pinjaman dan penilaian risiko.
+Proyek ini menganalisis data aplikasi pinjaman untuk mengidentifikasi segmen pelanggan yang berbeda menggunakan teknik machine learning tanpa supervisi (Unsupervised Learning). Pendekatan clustering menggunakan Self-Organizing Map (SOM) membantu lembaga keuangan memahami perilaku pelanggan dan mengoptimalkan pengambilan keputusan terkait pinjaman dan risiko.
+
+---
 
 ## ✨ Fitur
 
-- **Preprocessing Data**: Pembersihan data dan feature engineering yang komprehensif
-- **Deteksi Outlier**: Penghapusan outlier statistik menggunakan metode IQR
-- **Implementasi SOM Custom**: Algoritma clustering Self-Organizing Map dari nol
-- **Visualisasi**: Plot interaktif dan heatmap untuk eksplorasi data
-- **Analisis Cluster**: Karakterisasi dan profiling cluster yang detail
-- **Metrik Performa**: Evaluasi kualitas cluster dengan silhouette score
+* ✅ Preprocessing data dan feature engineering lengkap
+* 🔍 Deteksi dan penanganan outlier dengan metode IQR
+* 🧠 Implementasi algoritma Self-Organizing Map dari nol
+* 📊 Visualisasi interaktif dalam notebook
+* 📋 Analisis mendalam terhadap hasil cluster
+* 📈 Evaluasi kualitas dengan Silhouette Score
+
+---
 
 ## 📊 Dataset
 
-Analisis menggunakan dataset aplikasi pinjaman (`loan_applications.csv`) dengan fitur utama berikut:
+Menggunakan dataset `loan_applications.csv` yang mencakup:
 
-- **Informasi Pemohon**: Usia, pendapatan, status pekerjaan, tanggungan
-- **Detail Pinjaman**: Jumlah yang diminta, tenor, suku bunga, tujuan
-- **Metrik Keuangan**: Skor CIBIL, EMI yang ada, rasio hutang terhadap pendapatan
-- **Informasi Properti**: Status kepemilikan, alamat tempat tinggal
+* **Informasi Pemohon**: Usia, pekerjaan, pendapatan, tanggungan
+* **Informasi Pinjaman**: Jumlah pinjaman, tenor, suku bunga, tujuan
+* **Data Finansial**: Skor CIBIL, EMI aktif, rasio pembayaran
+* **Properti**: Kepemilikan dan alamat tempat tinggal
 
 ### Fitur Turunan
 
-Proyek ini membuat beberapa fitur engineering penting:
+* `interest_loan_per_month`
+* `loan_per_month`
+* `emi_with_loan_per_month`
+* `ratio_to_pay_per_month`
 
-- `interest_loan_per_month`: Bunga pinjaman bulanan
-- `loan_per_month`: Cicilan pinjaman bulanan
-- `emi_with_loan_per_month`: Total EMI bulanan termasuk pinjaman baru
-- `ratio_to_pay_per_month`: Rasio pembayaran bulanan terhadap pendapatan
+---
 
 ## 🛠️ Instalasi
 
 ### Prasyarat
 
-Pastikan Anda memiliki Python 3.7+ terinstal di sistem Anda.
+* Python 3.7+
+* Jupyter Notebook atau JupyterLab
 
-### Clone Repository
+### Instalasi Paket
+
+Instal pustaka yang dibutuhkan:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn openpyxl
+```
+
+---
+
+## 🚀 Penggunaan
+
+### Menjalankan Notebook
+
+1. Clone repository ini:
 
 ```bash
 git clone https://github.com/username/loan-application-clustering.git
 cd loan-application-clustering
 ```
 
-### Install Dependencies
+2. Jalankan Jupyter Notebook:
 
 ```bash
-pip install -r requirements.txt
+jupyter notebook loan_clustering_analysis.ipynb
 ```
 
-### Dependencies yang Diperlukan
+3. Jalankan semua sel secara berurutan untuk menjalankan preprocessing, training SOM, visualisasi, dan evaluasi.
 
-```
-pandas>=1.3.0
-numpy>=1.21.0
-seaborn>=0.11.0
-matplotlib>=3.4.0
-scikit-learn>=1.0.0
-openpyxl>=3.0.0
-```
-
-## 🚀 Penggunaan
-
-### Menjalankan Analisis Lengkap
-
-```bash
-python loan_clustering_analysis.py
-```
-
-### Input yang Diperlukan
-
-- File `loan_applications.csv` harus berada di direktori yang sama dengan script
-
-### Output yang Dihasilkan
-
-- **Visualisasi**: Berbagai plot dan heatmap disimpan sebagai gambar
-- **File Excel**: `cluster_loan8.xlsx` berisi data dengan label cluster
-- **Metrik**: Silhouette score dan ringkasan cluster di console
+---
 
 ## 🔬 Metodologi
 
 ### 1. Preprocessing Data
 
-- **Pembersihan Kolom**: Menghapus kolom yang tidak relevan
-- **Feature Engineering**: Membuat fitur finansial baru
-- **Encoding**: Mengubah variabel kategorikal menjadi numerik
-- **Scaling**: Normalisasi menggunakan MinMaxScaler
+* Menghapus kolom tidak relevan
+* Feature engineering finansial
+* Encoding data kategorikal
+* Normalisasi menggunakan MinMaxScaler
 
-### 2. Deteksi dan Penanganan Outlier
+### 2. Deteksi Outlier
+
+Menggunakan metode IQR:
 
 ```python
-# Metode IQR untuk outlier detection
-Q1 = data.quantile(0.25)
-Q3 = data.quantile(0.75)
+Q1 = df.quantile(0.25)
+Q3 = df.quantile(0.75)
 IQR = Q3 - Q1
-outlier_mask = (data >= (Q1 - 1.5 * IQR)) & (data <= (Q3 + 1.5 * IQR))
+mask = (df >= (Q1 - 1.5 * IQR)) & (df <= (Q3 + 1.5 * IQR))
 ```
 
-### 3. Implementasi SOM
+### 3. Self-Organizing Map (SOM)
 
-- **Arsitektur**: Grid 3x1 neuron
-- **Learning Rate**: Adaptive (menurun seiring iterasi)
-- **Neighborhood Function**: Gaussian dengan sigma yang menurun
-- **Iterasi**: 1000 epoch pelatihan
+* Grid 3x1
+* Learning rate adaptif
+* Gaussian neighborhood
+* Iterasi: 1000 epoch
 
-### 4. Evaluasi Cluster
+### 4. Evaluasi
 
-- **Visualisasi PCA**: Proyeksi 2D untuk visualisasi cluster
-- **Silhouette Score**: Metrik kualitas clustering
-- **Profil Cluster**: Analisis karakteristik rata-rata setiap cluster
+* PCA untuk visualisasi 2D
+* Silhouette Score sebagai metrik kualitas
+* Profil karakteristik tiap cluster
+
+---
 
 ## 📈 Hasil
 
-### Metrik Performa
+### Metrik
 
-- **Silhouette Score**: ~0.XX (nilai akan muncul saat menjalankan script)
-- **Jumlah Cluster**: 3 cluster berbeda
-
-### Karakteristik Cluster
-
-Setiap cluster memiliki profil yang berbeda berdasarkan:
-
-- **Usia Pemohon**: Distribusi usia yang berbeda
-- **Rasio Pembayaran**: Kemampuan bayar bulanan
-- **Skor CIBIL**: Tingkat kredibilitas
-- **Jumlah Pinjaman**: Nilai pinjaman yang diminta
-- **Pendapatan**: Tingkat pendapatan bulanan
+* **Silhouette Score**: \~0.XX (didapat saat eksekusi notebook)
+* **Cluster Terbentuk**: 3 cluster
 
 ### Visualisasi
 
-- **Correlation Matrix**: Heatmap korelasi antar fitur
-- **Distribusi Data**: Histogram sebelum dan sesudah pembersihan
-- **Cluster Visualization**: Scatter plot dengan proyeksi PCA
-- **Cluster Heatmap**: Karakteristik rata-rata setiap cluster
+* 🔵 Korelasi antar fitur (Heatmap)
+* 🔶 Histogram distribusi data
+* 🟢 Scatter plot hasil PCA
+* 🔴 Heatmap profil cluster
+
+---
 
 ## 📁 Struktur Proyek
 
 ```
 loan-application-clustering/
 │
-├── loan_clustering_analysis.py    # Script utama
-├── loan_applications.csv          # Dataset input
-├── cluster_loan8.xlsx             # Hasil clustering
-├── requirements.txt               # Dependencies
-├── README.md                      # Dokumentasi
-└── images/                        # Folder untuk visualisasi
+├── loan_clustering_analysis.ipynb    # Notebook utama
+├── loan_applications.csv             # Dataset input
+├── cluster_loan8.xlsx                # Output hasil cluster
+├── README.md                         # Dokumentasi proyek
+├── requirements.txt                  # (Opsional) daftar pustaka
+└── images/                           # Hasil visualisasi
     ├── correlation_matrix.png
     ├── cluster_visualization.png
     └── cluster_heatmap.png
 ```
 
+---
+
 ## 🔧 Kustomisasi
 
-### Mengubah Parameter SOM
+### Ubah Parameter SOM
 
 ```python
-# Dalam implementasi SimpleSOM
 som = SimpleSOM(
-    x=3,                    # Tinggi grid
-    y=1,                    # Lebar grid
-    input_len=X.shape[1],   # Dimensi input
-    sigma=1.0,              # Neighborhood radius
-    learning_rate=0.5       # Learning rate awal
+    x=3, y=1,
+    input_len=X.shape[1],
+    sigma=1.0,
+    learning_rate=0.5
 )
 ```
 
-### Menambah Fitur Baru
+### Tambah Fitur Baru
 
-1. Tambahkan kolom baru ke `df_digunakan`
-2. Sesuaikan preprocessing jika diperlukan
-3. Update array `X` untuk clustering
-
-## 🤝 Kontribusi
-
-Kontribusi sangat diterima! Silakan:
-
-1. Fork repository
-2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
-
-### Area untuk Kontribusi
-
-- Implementasi algoritma clustering lain (K-Means, DBSCAN)
-- Optimisasi hyperparameter otomatis
-- Dashboard interaktif dengan Streamlit/Dash
-- API untuk prediksi cluster real-time
-- Unit testing dan validasi
-
-## 📝 Lisensi
-
-Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail.
-
-## 📞 Kontak
-
-Jika Anda memiliki pertanyaan atau saran, silakan buat issue di repository ini atau hubungi:
-
-- **Email**: ian.teuku05@gmail.com
-- **GitHub**: [@PemulaBlunder]
-
-## 🙏 Acknowledgments
-
-- Dataset digunakan untuk tujuan pendidikan dan penelitian
-- Implementasi SOM terinspirasi dari penelitian tentang neural networks
-- Terima kasih kepada komunitas open source untuk library yang digunakan
+1. Tambahkan kolom baru di `df_digunakan`
+2. Update tahap preprocessing
+3. Tambahkan ke array `X` untuk pelatihan SOM
 
 ---
 
-**⭐ Jangan lupa untuk memberikan star jika proyek ini membantu Anda!**
+## 🤝 Kontribusi
+
+Sangat terbuka untuk kontribusi! Kamu bisa:
+
+1. Fork repo ini
+2. Buat branch: `git checkout -b fitur-baru`
+3. Commit: `git commit -m 'Menambahkan fitur baru'`
+4. Push: `git push origin fitur-baru`
+5. Buka Pull Request
+
+### Ide Kontribusi
+
+* Tambah algoritma lain (K-Means, DBSCAN)
+* Dashboard interaktif (Streamlit, Dash)
+* API prediksi cluster
+* Unit test dan evaluasi model
+
+---
+
+## 📝 Lisensi
+
+Proyek ini berada di bawah lisensi **MIT**. Silakan lihat [LICENSE](LICENSE) untuk detail.
+
+---
+
+## 📞 Kontak
+
+* Email: [ian.teuku05@gmail.com](mailto:ian.teuku05@gmail.com)
+* GitHub: [@PemulaBlunder](https://github.com/PemulaBlunder)
+
+---
+
+## 🙏 Acknowledgments
+
+* Dataset untuk tujuan edukasi dan riset
+* Inspirasi implementasi SOM dari berbagai studi neural network
+* Terima kasih komunitas open source atas library yang digunakan
+
+---
+
+⭐ **Bantu bintang repository ini jika bermanfaat untukmu!**
+
+---
