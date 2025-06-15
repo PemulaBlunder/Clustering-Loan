@@ -214,9 +214,8 @@ Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) unt
 
 Jika Anda memiliki pertanyaan atau saran, silakan buat issue di repository ini atau hubungi:
 
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile]
-- **GitHub**: [@yourusername]
+- **Email**: ian.teuku05@gmail.com
+- **GitHub**: [@PemulaBlunder]
 
 ## 🙏 Acknowledgments
 
