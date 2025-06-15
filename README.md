@@ -151,7 +151,7 @@ loan-application-clustering/
 │
 ├── loan_clustering_analysis.ipynb    # Notebook utama
 ├── loan_applications.csv             # Dataset input
-├── cluster_loan8.xlsx                # Output hasil cluster
+├── cluster_loan8(1).xlsx                # Output hasil cluster
 ├── README.md                         # Dokumentasi proyek
 └── images/                           # Hasil visualisasi
     ├── correlation_matrix.png
