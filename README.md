@@ -153,7 +153,6 @@ loan-application-clustering/
 ├── loan_applications.csv             # Dataset input
 ├── cluster_loan8.xlsx                # Output hasil cluster
 ├── README.md                         # Dokumentasi proyek
-├── requirements.txt                  # (Opsional) daftar pustaka
 └── images/                           # Hasil visualisasi
     ├── correlation_matrix.png
     ├── cluster_visualization.png
